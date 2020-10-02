@@ -1,0 +1,14 @@
+name: ExStats
+version: ${project.version}
+main: com.xboxbedrock.exstats
+api-version: 1.12
+prefix: ExStats
+load: STARTUP
+authors: [XboxBedrock]
+description: A stats plugin for pip
+website: thebitblock.net
+commands:
+  blocksplaced:
+    description: Find the blocksplaced of all users
+    usage: /<command>
+    permission: exstats.blocksplaced
