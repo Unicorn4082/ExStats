@@ -9,10 +9,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 
-public class Blocksplaced implements CommandExecutor {
-    private Exstats plugin; //This is a reference to the main class
+public class Blocksbroken implements CommandExecutor {
+    private final Exstats plugin; //This is a reference to the main class
 
-    public Blocksplaced(Exstats instanceOfMainClass) { //This is called a constructor; basic java. Won't explain more than the name.
+    public Blocksbroken(Exstats instanceOfMainClass) { //This is called a constructor; basic java. Won't explain more than the name.
         this.plugin = instanceOfMainClass; //Here, we set the reference to the main class, if this line doesn't exist, the 'plugin' instance is null, which will cause a NullPointerException since we call a method on a null object.
     }
     // function to sort hashmap by values
@@ -48,7 +48,7 @@ public class Blocksplaced implements CommandExecutor {
         ArrayList<String> editline = new ArrayList<String>();
 
         for (OfflinePlayer player: whitelist) {
-            ArrayList<String> dataArray = (ArrayList<String>) plugin.getCustomConfig().getStringList(player.getName() + ".placed");
+            ArrayList<String> dataArray = (ArrayList<String>) plugin.getCustomConfig().getStringList(player.getName() + ".breaked");
             int placed = dataArray.size();
             MappedValues.put(player.getName(), placed);
 
@@ -66,17 +66,17 @@ public class Blocksplaced implements CommandExecutor {
         sender.sendMessage(stringArray);
 
 
-            //try {
-            //Pastebin.PasteRequest request = new Pastebin.PasteRequest("O-rNCEpqum8MF7ZCbeNa84UelpKbbbPP", "kkkkkkkkkkkkkkk");
-            //request.setPasteName("Paste Java Wrap (Ligh AF)");//To set title
-            //request.setPasteFormat("java");//To make it a java format
-            //To make unlisted
-            //request.setPasteExpire("1H");//Make it live 1 hour
-            //request.postPaste();//Prints the paste url
+        //try {
+        //Pastebin.PasteRequest request = new Pastebin.PasteRequest("O-rNCEpqum8MF7ZCbeNa84UelpKbbbPP", "kkkkkkkkkkkkkkk");
+        //request.setPasteName("Paste Java Wrap (Ligh AF)");//To set title
+        //request.setPasteFormat("java");//To make it a java format
+        //To make unlisted
+        //request.setPasteExpire("1H");//Make it live 1 hour
+        //request.postPaste();//Prints the paste url
 
-            //sender.sendMessage(request.postPaste().toString());
+        //sender.sendMessage(request.postPaste().toString());
         //} catch (IOException e) {
-           // e.printStackTrace();
+        // e.printStackTrace();
         //}
 
         return true;

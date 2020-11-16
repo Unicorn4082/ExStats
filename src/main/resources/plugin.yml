@@ -1,6 +1,6 @@
 name: ExStats
 version: ${project.version}
-main: com.xboxbedrock.exstats
+main: com.xboxbedrock.Exstats
 api-version: 1.12
 prefix: ExStats
 load: STARTUP
@@ -12,3 +12,11 @@ commands:
     description: Find the blocksplaced of all users
     usage: /<command>
     permission: exstats.blocksplaced
+  blocksbreaked:
+    description: Find the blocksbreaked of all users
+    usage: /<command>
+    permission: exstats.blocksbreaked
+  blocksactivity:
+    description: Find the blocks placed and breaked of all users
+    usage: /<command>
+    permission: exstats.blocksbreaked

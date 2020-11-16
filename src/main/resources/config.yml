@@ -1,0 +1,67 @@
+afk-check-interval: 30
+afk-time: 180
+cancel-afk-on:
+  chat: true
+  command: true
+  move: true
+check-afk: true
+display-on-login: false
+message:
+  cannot-acquire: "You can not acquire %s now"
+  command-done: "Command executed successfully"
+  have-reward-redeem: "You have the following unacquired rewards, use `/ptt acquire [name]` to acquire"
+  have-reward-redeem-format: "- %s"
+  invalid-rule: "Not a valid disposable reward rule"
+  no-permission: "You are not allowed to do this"
+  no-player: "Player not found."
+  no-such-rule: "Rule not found"
+  nothing-to-acquire: "You have nothing to acquire"
+  only-player-can-do: "Only players can do this"
+  prefix: "[PlayTimeTracker]"
+  reload-finished: "Reload finished"
+  rule-applied: "Congratulations! The following rule has applied to you: %s"
+  statistic-day: "Online time today: %s"
+  statistic-for: "Statistic for player: %s"
+  statistic-month: "Online time this month: %s"
+  statistic-no-record: "No record for that player."
+  statistic-session: "Online time this session: %s"
+  statistic-time-format:
+    h: "%dhours "
+    m: "%dminutes "
+    ms: "%dms "
+    s: "%dseconds "
+    zero: "No Record"
+  statistic-total: "Online time total: %s"
+  statistic-week: "Online time this week: %s"
+rewards:
+  another-reward:
+    command: "give {playerName} 1 2"
+    description: "You were give two stones"
+  some-reward:
+    command: "give {playerName} 1 1"
+    description: "You were given one stone."
+  third-reward:
+    command: "broadcast {playerName} has been online for one hour!"
+    description: ""
+rules:
+  rule1:
+    auto-give: false
+    period: day
+    require: 60
+    reward: some-reward
+    timeout: 60
+  rule2:
+    auto-give: true
+    period: disposable
+    require: 60
+    reward: third-reward
+  rule3:
+    auto-give: true
+    eligible-group:
+      - group1
+      - group2
+    period: longtimenosee
+    require: 60
+    reward: another-reward
+save-interval: 60
+use-ess-afk-status: false
